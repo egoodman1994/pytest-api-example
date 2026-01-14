@@ -1,3 +1,4 @@
+''' Noticed the name in the schema was incorrectly marked as an integer'''
 pet = {
     "type": "object",
     "required": ["name", "type"],
@@ -6,7 +7,7 @@ pet = {
             "type": "integer"
         },
         "name": {
-            "type": "integer"
+            "type": "string"
         },
         "type": {
             "type": "string",
@@ -17,4 +18,14 @@ pet = {
             "enum": ["available", "sold", "pending"]
         },
     }
+}
+
+order = {
+    "type": "object",
+    "properties": {
+        "message": {
+            "type": "string"
+        }
+    },
+    "required": ["message"]
 }
